@@ -11,7 +11,7 @@ app.post('/node/sha256', function (req, res) {
         res.status(400).send({message: 'str should be at least 8 characters'})
     } else {
         sha256d = crypto.createHash('sha256').update(str).digest('base64')
-        console.log('hashed ' + str + ' = ' + sha256d)
+        console.log('sha256(' + str + ') = ' + sha256d)
         res.json({result: sha256d})
     }
 })
