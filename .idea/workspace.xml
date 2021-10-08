@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4737574e-47b2-408f-89b8-f2c585a090a9" name="Changes" comment="added node_modules to gitignore">
+    <list default="true" id="4737574e-47b2-408f-89b8-f2c585a090a9" name="Changes" comment="added the get method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
       <updated>1633445818639</updated>
       <workItem from="1633445820330" duration="297000" />
       <workItem from="1633633469790" duration="2241000" />
-      <workItem from="1633677596077" duration="4605000" />
+      <workItem from="1633677596077" duration="5123000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1633633687676</created>
@@ -103,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633635200985</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added the get method">
+      <created>1633693050234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633693050234</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,25 +133,10 @@
     <MESSAGE value="added log for str being less than 8 characters" />
     <MESSAGE value="deleted node_modules" />
     <MESSAGE value="added node_modules to gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added node_modules to gitignore" />
+    <MESSAGE value="added the get method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the get method" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/nodejs/server.js</url>
-          <line>27</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/nodejs/server.js</url>
-          <line>30</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="js.build_tools.npm">
         <watch expression="db" />
