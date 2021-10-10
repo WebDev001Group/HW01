@@ -10,7 +10,7 @@ app.post('/node/sha256', function (req, res) {
     let str = req.headers.str
     if (str.length < 8) {
         console.error('str(' + str + ') should be at least 8 characters')
-        res.status(400).send({message: 'str should be at least 8 characters'})
+        res.status(400).json({message: 'str should be at least 8 characters'})
     } else {
         sha256d = crypto.createHash('sha256').update(str).digest('base64')
 
@@ -30,7 +30,7 @@ app.get('/node/sha256', function (req, res) {
             res.json({[sha256dInReq]: str})
         } else {
             console.error('no str found for sha256d')
-            res.status(404).send({message: 'no str found for this sha256d'})
+            res.status(404).json({message: 'no str found for this sha256d'})
         }
     })
 })
