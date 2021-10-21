@@ -3,11 +3,10 @@ package main
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 
+	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis"
 )
 
@@ -17,68 +16,65 @@ func NewSHA256(data []byte) string {
 	hash := sha256.Sum256(data)
 	return hex.EncodeToString(hash[:])
 }
-func handleSHA(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/sha256" {
-		http.Error(w, "404 not found.", http.StatusNotFound)
+func getSha(c *gin.Context) {
+	sha := c.Query("sha256d") // shortcut for c.Request.URL.Query().Get("lastname")
+	fmt.Println("sha: ", sha)
+	val, err := client.Get(sha).Result()
+	if err != nil {
+		sha = "error in saving to redis"
+		c.String(http.StatusBadGateway, "%s", sha)
+		fmt.Println("error: ", err)
 		return
 	}
-	type Message struct {
-		Sha string
+	c.JSON(200, gin.H{
+		"string": val,
+	})
+}
+
+func postSha(c *gin.Context) {
+	body := Body{}
+	// using BindJson method to serialize body with struct
+	if err := c.BindJSON(&body); err != nil {
+		c.AbortWithError(http.StatusBadRequest, err)
+		return
 	}
-	decoder := json.NewDecoder(r.Body)
+	fmt.Println(body)
+	if len(body.String) < 8 {
+		val := "length is less than 8 characters"
+		c.JSON(200, gin.H{
+			"string": val,
+		})
+		return
+	}
+	val := NewSHA256([]byte(body.String))
 
-	var t Message
-
-	err := decoder.Decode(&t)
+	err := client.Set(val, body.String, 0).Err()
 	if err != nil {
-		println("panic")
-	}
-	w.Header().Set("Content-Type", "application/json")
-
-	if r.Method == "POST" {
-		//save sha256 in database
-		if len(t.Sha) < 8 {
-			t.Sha = "length is less than 8 characters"
-			json.NewEncoder(w).Encode(t)
-			return
-		}
-		value := t.Sha
-		t.Sha = NewSHA256([]byte(t.Sha))
-
-		err = client.Set(t.Sha, value, 0).Err()
-		if err != nil {
-			t.Sha = "error in saving to redis"
-			fmt.Println(err)
-		}
-		json.NewEncoder(w).Encode(t)
-
-	} else if r.Method == "GET" {
-
-		val, err := client.Get(t.Sha).Result()
-		if err != nil {
-			t.Sha = "error in saving to redis"
-			fmt.Println(err)
-			json.NewEncoder(w).Encode(t)
-			return
-		}
-		t.Sha = val
-		json.NewEncoder(w).Encode(t)
-
+		fmt.Println("error: ", err)
+		c.String(http.StatusBadGateway, "%s", err)
+		return
 	}
 
+	c.JSON(200, gin.H{
+		"string": val,
+	})
+
+}
+
+type Body struct {
+	// json tag to serialize json body
+	String string `json:"string"`
 }
 
 func main() {
 	client = redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
+		Addr:     "0.0.0.0:6379",
 		Password: "",
 		DB:       0,
 	})
-	http.HandleFunc("/sha256", handleSHA)
-	fmt.Printf("Starting server at port 8080\n")
-	var port = fmt.Sprintf("localhost:%d", 8080)
-	if err := http.ListenAndServe(port, nil); err != nil {
-		log.Fatal(err)
-	}
+	r := gin.Default()
+	r.GET("/sha256", getSha)
+	r.POST("/sha256", postSha)
+	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 
 }
