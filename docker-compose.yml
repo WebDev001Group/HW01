@@ -25,7 +25,8 @@ services:
 
     nginx:
         build:
-            context: ./nginx
+            context: .
+            dockerfile: ./nginx/Dockerfile
         ports:
           - 8000:8000
         restart: always
