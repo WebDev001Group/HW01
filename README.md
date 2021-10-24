@@ -14,13 +14,19 @@
 
 # Installation guide
 1. Open Terminal and Change Directory to the folder you want to download the project to.\
-```cd <download directory>```
+```
+cd <download directory>
+```
 
 2. Clone the Repository\
-   ```git clone https://github.com/WebDev001Group/HW01.git```
+```
+git clone https://github.com/WebDev001Group/HW01.git
+```
 
 3. run docker-compose\
-   ```docker-compose up --build```
+```
+docker-compose up --build
+```
 
 # Locust Results
 ## Initial Conditions
