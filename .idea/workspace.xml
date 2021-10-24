@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4737574e-47b2-408f-89b8-f2c585a090a9" name="Changes" comment="npm remove pg and add redis">
+    <list default="true" id="4737574e-47b2-408f-89b8-f2c585a090a9" name="Changes" comment="res.send() -&gt; res.json()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,12 @@
       <updated>1633445818639</updated>
       <workItem from="1633445820330" duration="297000" />
       <workItem from="1633633469790" duration="2241000" />
-      <workItem from="1633677596077" duration="6223000" />
+      <workItem from="1633677596077" duration="7154000" />
+      <workItem from="1633717934045" duration="664000" />
+      <workItem from="1633755387082" duration="40000" />
+      <workItem from="1633874062644" duration="126000" />
+      <workItem from="1633874204575" duration="1484000" />
+      <workItem from="1635090938955" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1633633687676</created>
@@ -133,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633693765854</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added redis to post and get methods">
+      <created>1633694824654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1633694824654</updated>
+    </task>
+    <task id="LOCAL-00010" summary="res.send() -&gt; res.json()">
+      <created>1633875840125</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1633875840125</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +177,9 @@
     <MESSAGE value="added the get method" />
     <MESSAGE value="npm remove unused packages" />
     <MESSAGE value="npm remove pg and add redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="npm remove pg and add redis" />
+    <MESSAGE value="added redis to post and get methods" />
+    <MESSAGE value="res.send() -&gt; res.json()" />
+    <option name="LAST_COMMIT_MESSAGE" value="res.send() -&gt; res.json()" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
