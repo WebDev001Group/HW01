@@ -13,17 +13,17 @@
 - [the pretty stuff(frontend)](frontend)
 
 # Installation guide
-1. Open Terminal and Change Directory to the folder you want to download the project to.\
+1. Open Terminal and Change Directory to the folder you want to download the project to
 ```
 cd <download directory>
 ```
 
-2. Clone the Repository\
+2. Clone the Repository
 ```
 git clone https://github.com/WebDev001Group/HW01.git
 ```
 
-3. run docker-compose\
+3. Run docker-compose
 ```
 docker-compose up --build
 ```
