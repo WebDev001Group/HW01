@@ -16,7 +16,7 @@
 
 ## Locust Results
 ### Initial Conditions
-![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/1.PNG?raw=true)
+![](locust/locust-screenshots/1/1.PNG?raw=true)
 
 ### CPU/RAM Conditions
 | No. of nodejs Servers | No. of go Servers | Result with 120 users | Result with 280 users |
