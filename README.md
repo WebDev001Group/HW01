@@ -26,7 +26,7 @@
 | 2 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/2.PNG?raw=true) |  ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/3.PNG?raw=true) |
 
 ### Charts
-| No. of nodejs Servers | No. of go Servers | Total RPS | Response Time (ms) | Number of Users |
+| No. of nodejs Servers | No. of go Servers | Requests Per Second | Response Time (ms) | Number of Users |
 | :-: | :-: | :-: | :-: | :-: |
 | 1 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/4.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/5.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/6.PNG?raw=true) |
 | 2 | 2 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/4.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/5.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/6.PNG?raw=true) |
