@@ -3,13 +3,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
     <title>HW01</title>
 </head>
 <body>
 
-    <p>alireza eiji is the man of focus1234</p>
-    
+    <button type="button" id="btn1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#sendString">Get Hash</button>
+    <button type="button" id="btn2" class="btn btn-info btn-lg" data-toggle="modal" data-target="#sendHash">Send Hash</button>
 
-    
+    <div class="modal fade" id="sendString" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">send string</h5>
+              <button type="button" id="colseBtn" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label">enter string</label>
+                        <div>
+                            <input type="text" id="string" class="form-control input-lg" name="text" value="">
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <legend class="col-form-label col-sm-2 pt-0">Servers</legend>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="nodeServerCheck" value="node" checked>
+                              <label class="form-check-label" for="nodeServerCheck">
+                                Node Server
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="goServerCheck" value="go">
+                              <label class="form-check-label" for="goServerCheck">
+                                Go Server
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <div class="form-group row">
+                        <label for="hashInput" class="col-sm-2 col-form-label">Hash:</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control-plaintext" id="hashInput" value="">
+                        </div>
+                      </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="getHashBtn" class="btn btn-primary">Get Hash</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="sendHash" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel2">send hash string</h5>
+              <button type="button" id="colseBtn2" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label">enter hash</label>
+                        <div>
+                            <input type="text" id="string2" class="form-control input-lg" name="text" value="">
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="row">
+                          <legend class="col-form-label col-sm-2 pt-0">Servers</legend>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="nodeServerCheck2" value="node" checked>
+                              <label class="form-check-label" for="nodeServerCheck1">
+                                Node Server
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="goServerCheck2" value="go">
+                              <label class="form-check-label" for="goServerCheck2">
+                                Go Server
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <div class="form-group row">
+                        <label for="stringInput" class="col-sm-2 col-form-label">String:</label>
+                        <div class="col-sm-10">
+                          <input type="text" readonly class="form-control-plaintext" id="stringInput" value="">
+                        </div>
+                      </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="sendHashBtn" class="btn btn-primary">Get Hash</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </body>
 </html>

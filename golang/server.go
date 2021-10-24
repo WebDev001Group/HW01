@@ -22,8 +22,12 @@ func getSha(c *gin.Context) {
 	val, err := client.Get(sha).Result()
 	if err != nil {
 		sha = "error in saving to redis"
-		c.String(http.StatusBadGateway, "%s", sha)
+		c.JSON(400, gin.H{
+			"string": "the string was not found!",
+		})
+		//c.String(http.StatusBadGateway, "%s", sha)
 		fmt.Println("error: ", err)
+		val = "not found!"
 		return
 	}
 	c.JSON(200, gin.H{
@@ -41,7 +45,7 @@ func postSha(c *gin.Context) {
 	fmt.Println(body)
 	if len(body.String) < 8 {
 		val := "length is less than 8 characters"
-		c.JSON(200, gin.H{
+		c.JSON(400, gin.H{
 			"string": val,
 		})
 		return
