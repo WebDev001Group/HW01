@@ -9,10 +9,10 @@
   - [The big brains behind this:](#the-big-brains-behind-this)
 
 ## Project Navigation
-- [go](https://github.com/WebDev001Group/HW01/tree/main/golang)/[nodejs](https://github.com/WebDev001Group/HW01/tree/main/nodejs)
-- [nginx](https://github.com/WebDev001Group/HW01/tree/main/nginx)
-- [locust](https://github.com/WebDev001Group/HW01/tree/main/locust)
-- [the pretty stuff(frontend)](https://github.com/WebDev001Group/HW01/tree/main/frontend)
+- [go](golang)/[nodejs](nodejs)
+- [nginx](nginx)
+- [locust](locust)
+- [the pretty stuff(frontend)](frontend)
 
 ## Locust Results
 ### Initial Conditions
@@ -21,17 +21,16 @@
 ### CPU/RAM Conditions
 | No. of nodejs Servers | No. of go Servers | Result with 120 users | Result with 280 users |
 | :-: | :-: | :-: | :-: |
-| 1 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/2.PNG?raw=true) |  ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/3.PNG?raw=true) |
-| 2 | 2 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/2.PNG?raw=true) |  ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/3.PNG?raw=true) |
-| 2 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/2.PNG?raw=true) |  ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/3.PNG?raw=true) |
+| 1 | 1 | ![](locust/locust-screenshots/1/2.PNG?raw=true) |  ![](locust/locust-screenshots/1/3.PNG?raw=true) |
+| 2 | 2 | ![](locust/locust-screenshots/2/2.PNG?raw=true) |  ![](locust/locust-screenshots/2/3.PNG?raw=true) |
+| 2 | 1 | ![](locust/locust-screenshots/3/2.PNG?raw=true) |  ![](locust/locust-screenshots/3/3.PNG?raw=true) |
 
 ### Charts
 | No. of nodejs Servers | No. of go Servers | Requests Per Second | Response Time (ms) | Number of Users |
 | :-: | :-: | :-: | :-: | :-: |
-| 1 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/4.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/5.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/1/6.PNG?raw=true) |
-| 2 | 2 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/4.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/5.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/2/6.PNG?raw=true) |
-| 2 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/5.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/6.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/7.PNG?raw=true) |
-
+| 1 | 1 | ![](locust/locust-screenshots/1/4.PNG?raw=true) | ![](locust/locust-screenshots/1/5.PNG?raw=true) | ![](locust/locust-screenshots/1/6.PNG?raw=true) |
+| 2 | 2 | ![](locust/locust-screenshots/2/4.PNG?raw=true) | ![](locust/locust-screenshots/2/5.PNG?raw=true) | ![](locust/locust-screenshots/2/6.PNG?raw=true) |
+| 2 | 1 | ![](locust/locust-screenshots/3/5.PNG?raw=true) | ![](locust/locust-screenshots/3/6.PNG?raw=true) | ![](locust/locust-screenshots/3/7.PNG?raw=true) |
 
 ## The big brains behind this
 
