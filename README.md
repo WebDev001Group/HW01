@@ -33,7 +33,7 @@
 | 2 | 1 | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/5.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/6.PNG?raw=true) | ![](https://github.com/WebDev001Group/HW01/blob/main/locust/locust-screenshots/3/7.PNG?raw=true) |
 
 
-## The big brains behind this:
+## The big brains behind this
 
 | Name             | Student ID |
 | :--------------: | :--------: |
